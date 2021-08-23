@@ -5066,6 +5066,16 @@ body.ie ._ibg img {
   }
 }
 
+@media (max-height: 540px) {
+  .mainscreen {
+    min-height: 540px;
+  }
+
+  .mainscreen .mainscreen__callback {
+    bottom: 80px;
+  }
+}
+
 @media (any-hover: hover) and (any-hover: hover) {
   .contacts__row-text:hover p a:hover {
     color: #92b69a;
