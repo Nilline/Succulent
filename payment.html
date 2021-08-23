@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+	<title>Заказ</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header_2">
+	<div class="header__container _container">
+		<div class="header__logo-block _lp">
+			<a href="index.html" class="header__logo"><span class="header__logo-decor _icon-logo-decor"></span><span
+					class="header__logo-text">Succulent</span></a>
+		</div>
+		<div class="header__body _lp">
+			<div data-da=".menu__list_col1,875,1" class="header__icons"></div>
+			<button type="button" class="menu__icon icon-menu">
+				<span class="menu__span"></span>
+				<span class="menu__span"></span>
+				<span class="menu__span"></span>
+			</button>
+		</div>
+		<div class="header__menu menu">
+			<nav class="menu__body">
+				<ul class="menu__list menu__list_col1">
+					<li class="menu__item menu__item_da3"></li>
+					<li class="menu__item"><a data-goto=".page__process" href="#" class="menu__link _goto-my">Изготовление
+							кашпо</a></li>
+					<li class="menu__item"><a data-goto=".page__caring" href="#" class="menu__link _goto-my">Уход</a></li>
+					<li class="menu__item"><a data-goto=".page__delivery" href="#" class="menu__link _goto-my">Доставка</a>
+					</li>
+					<li class="menu__item menu__item_da1"></li>
+					<li class="menu__item menu__item_da2"></li>
+				</ul>
+				<ul class="menu__list menu__list_col2">
+					<li class="menu__item menu__item_col2"><a data-goto=".page__contacts" data-da=".menu__item_da1,1100"
+							href="#" class="menu__link _goto-my">Контакты</a></li>
+					<li class="menu__item menu__item_col2"><a data-goto=".page__reviews" data-da=".menu__item_da2,1100"
+							href="#" class="menu__link _goto-my">Отзывы</a></li>
+					<li class="menu__item menu__item_col2"><span data-da=".header__icons,1100"
+							class="menu__favorites _icon-heart"><span>0</span></span></li>
+					<li class="menu__item menu__item_col2"><span data-da=".header__icons,1100"
+							class="menu__card _icon-card"><span>0</span></span></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="header_2__bottom-container _container">
+		<div class="header_2__bottom-block">
+			<form data-da=".menu__item_da3,1100,0" action="#" method="get" class="header_2__form form-search">
+				<input type="text" name="form[]" placeholder="Поиск..." class="form-search__input input">
+				<button type="submit" class="form-search__btn _icon-search"></button>
+			</form>
+			<form action="#" method="get" class="header_2__callback callback callback_header _active">
+				<button id="callBackBtn" type="submit" class="callback__button _icon-phone _active"></button>
+				<input autocomplete="off" type="tel" name="form[]" data-value="Заказать звонок"
+					class="callback__input input phone _phone _req">
+			</form>
+		</div>
+	</div>
+</header>
+		<main class="page">
+			<div class="page__payment payment">
+				<div class="payment__container _container">
+					<div class="payment__crumbs crumbs">
+						<a href="index.html" class="crumbs__item _icon-aroow-right-crumbs"><span>Главная</span></a>
+						<a href="basket.html" class="crumbs__item _icon-aroow-right-crumbs"><span>Корзина</span></a>
+						<a href="basket.html" class="crumbs__item _active"><span>Заказ</span></a>
+					</div>
+					<form data-test action="#" method="" class="payment__form">
+						<div class="payment__info">
+							<nav class="payment__nav nav-payment">
+								<div class="nav-payment__body">
+									<div class="nav-payment__item nav-payment__item_one _active"></div>
+									<div class="nav-payment__item nav-payment__item_two"></div>
+									<div class="nav-payment__item nav-payment__item_three"></div>
+								</div>
+							</nav>
+							<div class="payment__content content-payment">
+								<div class="content-payment__block content-payment__block_one _active">
+									<div class="content-payment__body">
+										<div class="content-payment__sum-block">
+											<span class="content-payment__text">сума к оплате:</span>
+											<span class="content-payment__sum">990<span> грн</span></span>
+										</div>
+										<div class="content-payment__bottom-block">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="Номер карты: хххх хххх хххх хххх" data-value=""
+												class="content-payment__input input _cart _req">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="Строк действия: 01/20" data-value=""
+												class="content-payment__input input _cart-date _req">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="Владелец карты: Имя и Фамилия" data-value=""
+												class="content-payment__input input _req">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="CVC/CVV: 3 цыфры на обратной стороне" data-value=""
+												class="content-payment__input input _cart-cvv _req">
+										</div>
+										<button type="button" class="content-payment__next content-payment__next_page-one button">Далее</button>
+									</div>
+								</div>
+								<div class="content-payment__block content-payment__block_two">
+									<div class="content-payment__body">
+										<div class="content-payment__bottom-block">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="Ф.И.О" data-value=""
+												class="content-payment__input input _req">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="Почта : УкрПочта или Новая Почта" data-value=""
+												class="content-payment__input input _req">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="Номер телефона" data-value=""
+												class="content-payment__input input _phone _req">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="№ отделения почты" data-value=""
+												class="content-payment__input input _req">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="Город доставки" data-value=""
+												class="content-payment__input input _req">
+											<input autocomplete="off" type="text" name="form[]" data-error=""
+												placeholder="Коментарий к заказу (не обезательно) " data-value=""
+												class="content-payment__input input">
+										</div>
+										<button type="submit" class="content-payment__next content-payment__next_page-two button">Далее</button>
+									</div>
+								</div>
+								<div class="content-payment__block content-payment__block_three">
+									<div class="content-payment__body">
+										<div class="content-payment__bottom-block content-payment__bottom-block_last-page">
+											<div class="content-payment__title">Ваш заказ принят!</div>
+											<div class="content-payment__decor">
+												<span class="_icon-logo-decor"></span>
+											</div>
+											<div class="content-payment__text-end">Спасибо, что выбрали нас!
+												Ваш заказ будет обработан в ближайшее время.
+												Мы пришлем вам информацыю о доставке
+												на указаный вами номер телефона!</div>
+										</div>
+										<a href="index.html" class="content-payment__next button">Завершить</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+	<div class="footer__main-image _ibg">
+		<img src="img/footer_bg.jpg" alt="image">
+	</div>
+	<div class="footer__logo-block">
+		<div class="footer__container-logo _container">
+			<a href="index.html" class="footer__logo"><span class="header__logo-decor _icon-logo-decor"></span><span class="header__logo-text">Succulent</span></a>
+		</div>
+	</div>
+	<div class="footer__body">
+		<div class="footer__container _container">
+			<div class="footer__content">
+				<div class="footer__row">
+					<div class="footer__column">
+						<nav class="footer__list">
+							<a data-goto=".page__delivery" href="#" class="footer__nav-link _goto-my">Доставка</a>
+							<a data-goto=".page__contacts" href="#" class="footer__nav-link _goto-my">Контакты</a>
+						</nav>
+					</div>
+					<div class="footer__column">
+						<div class="footer__social">
+							<a href="#" class="footer__social-link _icon-instagram"></a>
+							<a href="#" class="footer__social-link _icon-twitter"></a>
+							<a href="#" class="footer__social-link _icon-facebook"></a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<div class="footer__copy">
+							<p data-da=".footer__list,992">Дизайн-Алина Решетняк</p>
+							<p>© «Succulent 2021»</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	</div>
+	<div class="popup popup_popup">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_massagename-message">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_video">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close popup__close_video"></div>
+			<div class="popup__video _video"></div>
+		</div>
+	</div>
+</div>
+
+	<!-- Swiper -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>
