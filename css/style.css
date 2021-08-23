@@ -2042,6 +2042,8 @@ body.ie ._ibg img {
   height: 100%;
   top: 0;
   left: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .nav-catalog__name {
@@ -4041,7 +4043,7 @@ body.ie ._ibg img {
   }
 
   .delivery__row {
-    margin: -25px -15;
+    margin: -25px -15px;
   }
 
   .delivery__column {
