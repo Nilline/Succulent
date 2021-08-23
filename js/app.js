@@ -959,7 +959,7 @@ let callBackHeader = document.querySelector('.callback_header');
 let mainScreen = document.querySelector('.page__mainscreen');
 let header2 = document.querySelector('.header_2');
 let payment = document.querySelector('.payment');
-
+let callbackBoolean = false;
 let heightHeader;
 let heightMainscreen;
 let scrollCurrrent;
@@ -970,11 +970,15 @@ if (callBack || callBackHeader) {
 		if (mainScreen) {
 			let mainScreenHeight = heightMainscreen = mainScreen.offsetHeight;
 			if (scroll_value > mainScreenHeight) {
-				callBack.classList.add('_scroll');
-				hiddenCallback();
+				if (!callbackBoolean) {
+					callBack.classList.add('_scroll');
+					hiddenCallback();
+					callbackBoolean = true;
+				}
 			} else {
 				callBack.classList.remove('_scroll');
 				showCallback();
+				callbackBoolean = false;
 			}
 		}
 		if (callBackHeader) {
@@ -993,7 +997,6 @@ if (callBack || callBackHeader) {
 				showCallback();
 			}
 		}
-
 	}
 }
 function getWindowWidth() {
@@ -1040,7 +1043,7 @@ window.onload = function () {
 				paymentNavOne.classList.remove('_active');
 				paymentNavTwo.classList.add('_active');
 			}
-			
+
 		}
 	}
 }
@@ -2205,7 +2208,6 @@ setTimeout(function () {
 	//document.addEventListener("DOMContentLoaded", scroll_scroll);
 	scroll_scroll();
 }, 100);
-
 function scroll_lazy(scr_item) {
 	/*
 	let lazy_src = scr_item.querySelectorAll('*[data-src]');
