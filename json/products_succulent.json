@@ -1,0 +1,48 @@
+{
+	"products": [
+		{
+			"url": "#",
+			"title": "Суккулент Ехеверия",
+			"labels": [
+				{
+					"type": "percent"
+				}
+			],
+			"image": "succulent/img_05.png",
+			"price": "99 грн",
+			"priceOld": "150 грн",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Суккулент Ехеверия Пурпузорум",
+			"labels": "",
+			"image": "succulent/img_06.png",
+			"price": "150 грн",
+			"priceOld": "",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Суккулент Ехеверия",
+			"labels": "",
+			"image": "succulent/img_07.png",
+			"price": "300 грн",
+			"priceOld": "",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Суккулент Ехеверия",
+			"labels": [
+				{
+					"type": "percent"
+				}
+			],
+			"image": "succulent/img_08.png",
+			"price": "150 грн",
+			"priceOld": "200 грн",
+			"linkUrl": ""
+		}
+	]
+}

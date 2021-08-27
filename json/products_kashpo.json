@@ -1,0 +1,52 @@
+{
+	"products": [
+		{
+			"url": "#",
+			"title": "Кашпо Битон (дерево)",
+			"labels": [
+				{
+					"type": "percent"
+				}
+			],
+			"image": "pots/img_05.png",
+			"price": "250 грн",
+			"priceOld": "300 грн",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Кашпо Скло",
+			"labels": "",
+			"image": "pots/img_06.png",
+			"price": "180 грн",
+			"priceOld": "",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Кашпо Скло (подвесные)",
+			"labels": [
+				{
+					"type": "percent"
+				}
+			],
+			"image": "succulent/img_07.png",
+			"price": "180 грн",
+			"priceOld": "250 грн",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Кашпо Скло Микс ",
+			"labels": [
+				{
+					"type": "percent"
+				}
+			],
+			"image": "succulent/img_08.png",
+			"price": "180 грн",
+			"priceOld": "250 грн",
+			"linkUrl": ""
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"products": [
+		{
+			"url": "#",
+			"title": "Кактус Микс",
+			"labels": [
+				{
+					"type": "percent"
+				}
+			],
+			"image": "cactus/img_05.png",
+			"price": "250 грн",
+			"priceOld": "300 грн",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Кактус",
+			"labels": "",
+			"image": "cactus/img_06.png",
+			"price": "150 грн",
+			"priceOld": "",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Кактус",
+			"labels": "",
+			"image": "cactus/img_07.png",
+			"price": "300 грн",
+			"priceOld": "",
+			"linkUrl": ""
+		},
+		{
+			"url": "#",
+			"title": "Кактус",
+			"labels": [
+				{
+					"type": "percent"
+				}
+			],
+			"image": "cactus/img_08.png",
+			"price": "200 грн",
+			"priceOld": "250 грн",
+			"linkUrl": ""
+		}
+	]
+}
