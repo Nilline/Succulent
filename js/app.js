@@ -1696,27 +1696,27 @@ function form_validate_input(input) {
 function form_add_error(input) {
 	input.classList.add('_error');
 	input.parentElement.classList.add('_error');
-	if (document.querySelector('.payment')) {
-		const paymentPageOneBtn = document.querySelector('.content-payment__next_page-one');
-		const paymentPageOneSum = document.querySelector('.content-payment__sum-block');
-		input.closest('.content-payment__block').classList.add('_active');
-		paymentPageOneBtn.style.display = 'none';
-		paymentPageOneSum.style.display = 'none';
-		document.querySelector('.content-payment__next_page-two').addEventListener("click", function (e) {
-			const formInputPayment = document.querySelectorAll('.content-payment__input');
-			for (let index = 0; index < formInputPayment.length; index++) {
-				const formInputPayments = formInputPayment[index];
-				if (formInputPayments.classList.contains('_no-error')) {
-					document.querySelector('.content-payment__block_one').classList.remove('_active');
-					document.querySelector('.content-payment__block_two').classList.remove('_active');
-					document.querySelector('.content-payment__block_three').classList.add('_active');
-					document.querySelector('.nav-payment__item_one').classList.remove('_active');
-					document.querySelector('.nav-payment__item_two').classList.remove('_active');
-					document.querySelector('.nav-payment__item_three').classList.add('_active');
-				}
-			}
-		});
-	}
+	// if (document.querySelector('.payment')) {
+	// 	const paymentPageOneBtn = document.querySelector('.content-payment__next_page-one');
+	// 	const paymentPageOneSum = document.querySelector('.content-payment__sum-block');
+	// 	input.closest('.content-payment__block').classList.add('_active');
+	// 	paymentPageOneBtn.style.display = 'none';
+	// 	paymentPageOneSum.style.display = 'none';
+	// 	document.querySelector('.content-payment__next_page-two').addEventListener("click", function (e) {
+	// 		const formInputPayment = document.querySelectorAll('.content-payment__input');
+	// 		for (let index = 0; index < formInputPayment.length; index++) {
+	// 			const formInputPayments = formInputPayment[index];
+	// 			if (formInputPayments.classList.contains('_no-error')) {
+	// 				document.querySelector('.content-payment__block_one').classList.remove('_active');
+	// 				document.querySelector('.content-payment__block_two').classList.remove('_active');
+	// 				document.querySelector('.content-payment__block_three').classList.add('_active');
+	// 				document.querySelector('.nav-payment__item_one').classList.remove('_active');
+	// 				document.querySelector('.nav-payment__item_two').classList.remove('_active');
+	// 				document.querySelector('.nav-payment__item_three').classList.add('_active');
+	// 			}
+	// 		}
+	// 	});
+	// }
 
 	let input_error = input.parentElement.querySelector('.form__error');
 	if (input_error) {

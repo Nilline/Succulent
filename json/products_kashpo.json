@@ -30,7 +30,7 @@
 					"type": "percent"
 				}
 			],
-			"image": "succulent/img_07.png",
+			"image": "pots/img_07.png",
 			"price": "180 грн",
 			"priceOld": "250 грн",
 			"linkUrl": ""
@@ -43,7 +43,7 @@
 					"type": "percent"
 				}
 			],
-			"image": "succulent/img_08.png",
+			"image": "pots/img_08.png",
 			"price": "180 грн",
 			"priceOld": "250 грн",
 			"linkUrl": ""
