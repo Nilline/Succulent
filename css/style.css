@@ -2607,9 +2607,6 @@ body.ie ._ibg img {
   margin-bottom: 52px;
 }
 
-._no-webp .delivery__background{
-  background: url("../img/delivery/bg.png") center/contain no-repeat; }
-
 .delivery__background {
   position: relative;
   z-index: 2;
@@ -3631,6 +3628,9 @@ body.ie ._ibg img {
   .caring__name {
     cursor: default;
   }
+
+  ._no-webp .delivery__background{
+    background: url("../img/delivery/bg.png") center/contain no-repeat; }
 
   .delivery__background-center::before,
   .delivery__background-center::after {
@@ -5495,4 +5495,7 @@ body.ie ._ibg img {
 
 ._webp .parallax{ background: url(../img/main-screen-parallax.webp) center/cover no-repeat fixed; }
 
-._webp .delivery__background{ background: url(../img/delivery/bg.webp) center/contain no-repeat; }
+@media (min-width: 479.98px){
+
+  ._webp .delivery__background{ background: url(../img/delivery/bg.webp) center/contain no-repeat; }
+}
