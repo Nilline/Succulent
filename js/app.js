@@ -953,6 +953,7 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+const body = document.body;
 let callBack = document.querySelector('.mainscreen__callback');
 let catalog = document.querySelector('._catalog');
 let moreBtns = document.querySelectorAll('.tabs-catalog__more');
@@ -965,11 +966,25 @@ let callbackHeaderBoolean = false;
 let heightHeader;
 let heightMainscreen;
 let scrollCurrrent;
+let lastScroll;
 const cactus = document.querySelector('.tabs-catalog__row_catalog-cactus');
-if (callBack || callBackHeader) {
-	window.addEventListener('scroll', page_scroll);
-	function page_scroll() {
-		let scroll_value = scrollCurrrent = pageYOffset;
+
+window.addEventListener('scroll', page_scroll);
+function page_scroll() {
+	let scroll_value = scrollCurrrent = pageYOffset;
+	if (scroll_value <= 0 && body.classList.contains('_scroll-up')) {
+		body.classList.remove('_scroll-up');
+	}
+	if (scroll_value > lastScroll && !body.classList.contains('_scroll-down')) {
+		body.classList.remove('_scroll-up');
+		body.classList.add('_scroll-down');
+	}
+	if (scroll_value < lastScroll && body.classList.contains('_scroll-down')) {
+		body.classList.add('_scroll-up');
+		body.classList.remove('_scroll-down');
+	}
+	lastScroll = scroll_value;
+	if (callBack || callBackHeader) {
 		if (mainScreen) {
 			let mainScreenHeight = heightMainscreen = mainScreen.offsetHeight;
 			if (scroll_value > mainScreenHeight) {
@@ -1006,6 +1021,7 @@ if (callBack || callBackHeader) {
 		}
 	}
 }
+
 function getWindowWidth() {
 	return window.innerWidth || document.body.clientWidth;
 }
@@ -1210,7 +1226,7 @@ function loadProductsSucculent(data) {
 		addAttributeDataPid();
 		addAttributeDataPrice();
 		addAttributeDataNews();
-		
+
 	});
 }
 function loadProductsCactus(data) {
@@ -1291,7 +1307,7 @@ function loadProductsCactus(data) {
 		addAttributeDataPid();
 		addAttributeDataPrice();
 		addAttributeDataNews();
-		
+
 	});
 }
 function loadProductsAloe(data) {
@@ -1372,7 +1388,7 @@ function loadProductsAloe(data) {
 		addAttributeDataPid();
 		addAttributeDataPrice();
 		addAttributeDataNews();
-		
+
 	});
 }
 function loadProductsKashpo(data) {
@@ -1453,7 +1469,7 @@ function loadProductsKashpo(data) {
 		addAttributeDataPid();
 		addAttributeDataPrice();
 		addAttributeDataNews();
-		
+
 	});
 }
 
@@ -1552,7 +1568,7 @@ if (catalog) {
 			const potsChildren = potsChildrens[index];
 			potsChildren.setAttribute('data-pid', index);
 		}
-		
+
 	}
 	addAttributeDataPid();
 	addAttributeDataPrice();
@@ -1597,6 +1613,73 @@ if (catalog) {
 		return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 	}
 }
+
+//========================================================================================================================================================
+// Линза
+/*
+function imageZoom(imgID, resultID) {
+	var img, lens, result, cx, cy;
+	img = document.getElementById(imgID);
+	// создать блок с результатом:
+	results = document.createElement("DIV");
+	results.setAttribute("id", "myresult");
+	results.classList.add("img-zoom-result");
+	// вставить блок результата:
+	img.parentElement.appendChild(results, img);
+	result = document.getElementById(resultID);
+	// создать линзу:
+	lens = document.createElement("DIV");
+	lens.setAttribute("class", "img-zoom-lens");
+	// вставить линзы:
+	img.parentElement.insertBefore(lens, img);
+	// вычислите соотношение между результатом DIV и объективом:
+	cx = result.offsetWidth / lens.offsetWidth;
+	cy = result.offsetHeight / lens.offsetHeight;
+	// задайте свойства фона для результата DIV:
+	result.style.backgroundImage = "url('" + img.src + "')";
+	result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+	// выполните функцию, когда кто-то перемещает курсор на изображение или объектив:
+	lens.addEventListener("mousemove", moveLens);
+	img.addEventListener("mousemove", moveLens);
+	// а также для сенсорных экранов:
+	lens.addEventListener("touchmove", moveLens);
+	img.addEventListener("touchmove", moveLens);
+	function moveLens(e) {
+		var pos, x, y;
+		// предотвратите любые другие действия, которые могут произойти при перемещении по изображению:
+		e.preventDefault();
+		// получить позиции курсора x и y:
+		pos = getCursorPos(e);
+		// рассчитайте положение объектива:
+		x = pos.x - (lens.offsetWidth / 2);
+		y = pos.y - (lens.offsetHeight / 2);
+		// не допускайте расположения объектива вне изображения:
+		if (x > img.width - lens.offsetWidth) { x = img.width - lens.offsetWidth; }
+		if (x < 0) { x = 0; }
+		if (y > img.height - lens.offsetHeight) { y = img.height - lens.offsetHeight; }
+		if (y < 0) { y = 0; }
+		// установите положение объектива:
+		lens.style.left = x + "px";
+		lens.style.top = y + "px";
+		// покажите что такое объектив:
+		result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+	}
+	function getCursorPos(e) {
+		var a, x = 0, y = 0;
+		e = e || window.event;
+		// получить x и y позиции изображения:
+		a = img.getBoundingClientRect();
+		// вычислите координаты курсора x и y относительно изображения:
+		x = e.pageX - a.left;
+		y = e.pageY - a.top;
+		// рассмотрим любую прокрутку страницы:
+		x = x - window.pageXOffset;
+		y = y - window.pageYOffset;
+		return { x: x, y: y };
+	}
+}
+imageZoom("myimage", "myresult");
+*/
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {
@@ -2550,12 +2633,12 @@ if (document.querySelector('.tabs-catalog__row_4')) {
 }
 if (document.querySelector('.reviews__slider')) {
 	let slider_reviews = new Swiper('.reviews__slider', {
-		
+
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false,
 		},
-		
+
 		observer: true,
 		observeParents: true,
 		observeSlideChildren: true,
@@ -2615,6 +2698,132 @@ if (document.querySelector('.reviews__slider')) {
 		//	el: '.swiper-scrollbar',
 		//},
 	});
+}
+if (document.querySelector('.card-product__main-image')) {
+	let slider_product_small = new Swiper('.card-product__small-image', {
+
+		// autoplay: {
+		// 	delay: 5000,
+		// 	disableOnInteraction: false,
+		// },
+
+		observer: true,
+		observeParents: true,
+		observeSlideChildren: true,
+		slidesPerView: 3,
+		spaceBetween: 15,
+		autoHeight: false,
+		speed: 800,
+		// loop: true,
+		// watchOverflow: true,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		// loop: true,
+		//preloadImages: false,
+		//lazy: true,
+		// Dotts
+		// pagination: {
+		// 	el: '.reviews__pagination',
+		// 	clickable: true,
+		// },
+		// Arrows
+		// navigation: {
+		// 	nextEl: '.slider-reviews__nav_next',
+		// 	prevEl: '.slider-reviews__nav_prev',
+		// },
+
+		breakpoints: {
+			320: {
+				direction: "horizontal",
+			},
+			680: {
+				direction: "vertical",
+			},
+			
+		},
+
+		on: {
+			lazyImageReady: function () {
+				ibg();
+			},
+		}
+		// And if we need scrollbar
+		//scrollbar: {
+		//	el: '.swiper-scrollbar',
+		//},
+	});
+	let slider_product_main = new Swiper('.card-product__main-image', {
+
+		// autoplay: {
+		// 	delay: 5000,
+		// 	disableOnInteraction: false,
+		// },
+
+		observer: true,
+		observeParents: true,
+		observeSlideChildren: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		autoHeight: false,
+		speed: 800,
+		// loop: true,
+		thumbs: {
+			swiper: slider_product_small,
+		},
+		// watchOverflow: true,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		// loop: true,
+		//preloadImages: false,
+		//lazy: true,
+		// Dotts
+		// pagination: {
+		// 	el: '.reviews__pagination',
+		// 	clickable: true,
+		// },
+		// Arrows
+		// navigation: {
+		// 	nextEl: '.slider-reviews__nav_next',
+		// 	prevEl: '.slider-reviews__nav_prev',
+		// },
+
+		// breakpoints: {
+		// 	320: {
+		// 		slidesPerView: 1,
+		// 		spaceBetween: 0,
+		// 		autoHeight: true,
+		// 	},
+		// 	480: {
+		// 		slidesPerView: 1.6,
+		// 		spaceBetween: 0,
+		// 	},
+		// 	650: {
+		// 		slidesPerView: 2.2,
+		// 		spaceBetween: 0,
+		// 	},
+		// 	768: {
+		// 		slidesPerView: 2.3,
+		// 		spaceBetween: 0,
+		// 	},
+		// 	992: {
+		// 		slidesPerView: 3,
+		// 		spaceBetween: 0,
+		// 	},
+		// },
+
+		on: {
+			lazyImageReady: function () {
+				ibg();
+			},
+		}
+		// And if we need scrollbar
+		//scrollbar: {
+		//	el: '.swiper-scrollbar',
+		//},
+	});
+}
+if (document.querySelector('.card-product__small-image')) {
+
 }
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
